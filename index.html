@@ -7,15 +7,55 @@
   <style>
     h1{
       color: rgb(255, 174, 43);
+      background-color: aqua;
     }
   </style>
 </head>
 <body>
-  <h1 onclick="alert('Tocaste el titulo');">Javascript</h1>
+  <h1 onmouseover="document.body.style.backgroundColor = 'yellow';">Javascript</h1>
   <button onclick="alert('Hola usuario!!');">Click!!!</button>
+  <button onclick="saludar()">Saludo</button>
+
+
+  <button onclick="document.body.style.backgroundColor = 'red';">Pintar fondo Rojo</button>
+  <button onclick="document.body.style.backgroundColor = '#000';">Pintar fondo Negro</button>
+  <button onclick="document.body.style.backgroundColor = 'rgb(55,255,40)';">Pintar fondo Verde</button>
+  <button onclick="document.body.style.background = 'no-repeat center/80% url(https://www.freecodecamp.org/news/content/images/2021/09/Document.jpg)';">Colocar imagen</button>
+
+  <button onclick="cargarParrafo()">Cargar parrafo</button>
+  <button onclick="eliminarParrafo()">Eliminar parrafo</button>
+  <button onclick="mostrarParrafo()">Mostrar parrafo</button>
+
+  <p id="parrafo"></p>
 
   <script>
-    
+    function saludar(){
+      document.body.style.backgroundColor = '#000';
+      var nombrePersona = "Pedro"
+      alert("Bienvenido" + nombrePersona);
+      console.log("Bienvenido " + nombrePersona);
+    }
+
+    // saludar();
+
+    function cargarParrafo(){
+     // document.getElementById('parrafo').innerHTML = "Texto del parrafo cargado por le boton"
+     var parrafo1 = document.getElementById('parrafo');
+     parrafo1.innerHTML = "Texto del parrafo cargado por le boton";
+     parrafo1.style.backgroundColor = "blue";
+     parrafo1.style.color = "#fff";
+     console.log(parrafo1);
+    }
+
+    function eliminarParrafo(){
+      var parrafo2 = document.getElementById('parrafo');
+      parrafo2.style.display = "none";
+    }
+
+    function mostrarParrafo(){
+      var parrafo2 = document.getElementById('parrafo');
+      parrafo2.style.display = "block";
+    }
   </script>
 </body>
 </html>
