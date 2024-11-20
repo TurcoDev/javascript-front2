@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     h1{
       color: rgb(255, 174, 43);
@@ -15,6 +16,7 @@
   <h1 onmouseover="document.body.style.backgroundColor = 'yellow';">Javascript</h1>
   <button onclick="alert('Hola usuario!!');">Click!!!</button>
   <button onclick="saludar()">Saludo</button>
+  <button onclick="pintarFondo()">Pintar</button>
 
 
   <button onclick="document.body.style.backgroundColor = 'red';">Pintar fondo Rojo</button>
@@ -28,33 +30,15 @@
 
   <p id="parrafo"></p>
 
+  <script src="js/codigoScript.js"></script>
+
   <script>
     function saludar(){
+      var nombrePersona = prompt("Ingrese su nombre");
+      // var nombrePersona = "Pedro"
       document.body.style.backgroundColor = '#000';
-      var nombrePersona = "Pedro"
       alert("Bienvenido" + nombrePersona);
       console.log("Bienvenido " + nombrePersona);
-    }
-
-    // saludar();
-
-    function cargarParrafo(){
-     // document.getElementById('parrafo').innerHTML = "Texto del parrafo cargado por le boton"
-     var parrafo1 = document.getElementById('parrafo');
-     parrafo1.innerHTML = "Texto del parrafo cargado por le boton";
-     parrafo1.style.backgroundColor = "blue";
-     parrafo1.style.color = "#fff";
-     console.log(parrafo1);
-    }
-
-    function eliminarParrafo(){
-      var parrafo2 = document.getElementById('parrafo');
-      parrafo2.style.display = "none";
-    }
-
-    function mostrarParrafo(){
-      var parrafo2 = document.getElementById('parrafo');
-      parrafo2.style.display = "block";
     }
   </script>
 </body>
