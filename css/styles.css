@@ -1,0 +1,21 @@
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cuadro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: aliceblue;
+  margin: 5px;
+  /* display: inline-block; */
+}
+
+.circulo {
+  border-radius: 50%;
+}
