@@ -75,3 +75,16 @@ if (numero1 < numero2) {
 } else {
   console.log(numero1 + " es mayor que " + numero2);
 }
+
+// Iteraciones -- Ciclos -- loops -- repeticiones
+// While
+var iteracionNumero = 1;
+while (iteracionNumero < 9) {
+  console.log("Iteracion While numero: " + iteracionNumero);
+  iteracionNumero++; //iteracionNumero = iteracionNumero + 1;
+}
+  
+// For
+for (var iteracion = 1; iteracion < 9; iteracion++) {
+  console.log("Iteracion For numero: " + iteracion);
+}
